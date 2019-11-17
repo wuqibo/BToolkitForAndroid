@@ -34,7 +34,9 @@ public class VersionChecker {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                onCancel.call();
+				if(onCancel != null){
+                    onCancel.call();
+				}
             }
         });
     }
